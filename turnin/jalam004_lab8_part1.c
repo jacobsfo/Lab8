@@ -28,8 +28,10 @@ unsigned short x = ADC;
 unsigned short tmpB= 0x00;
 unsigned short tmpD = 0x00;
 tmpB = (char)(x);
-unsigned char my_char = (char)(x >> 4);
-tmpD = ((my_char & 0x30) >> 4);
+//unsigned char my_char = (char)(x >> 4);
+unsigned char my_char = (char)(x >> 8);
+//tmpD = ((my_char & 0x30) >> 4);
+tmpD = my_char;
 PORTB = tmpB;
 PORTD = tmpD;
 
